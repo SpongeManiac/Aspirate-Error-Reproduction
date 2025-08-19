@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoapi
+spec:
+  type: ClusterIP
+  selector:
+    app: echoapi
+  ports:
+  - name: http
+    port: 8000
+    targetPort: 8080
+  - name: https
+    port: 8100
+    targetPort: 8443

@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoapi
+  labels:
+    app: echoapi
+spec:
+  minReadySeconds: 60
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echoapi
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: echoapi
+    spec:
+      containers:
+      - name: echoapi
+        image: echoapi:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: https
+          containerPort: 8443
+        envFrom:
+        - configMapRef:
+            name: echoapi-env
+        - secretRef:
+            name: echoapi-secrets
+      terminationGracePeriodSeconds: 180

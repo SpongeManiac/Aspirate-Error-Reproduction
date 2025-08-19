@@ -1,0 +1,24 @@
+{
+  "inputPath": "aspirate-output",
+  "containerImageTags": [
+    "latest"
+  ],
+  "kubeContext": "kubernetes-admin@desktop",
+  "outputFormat": "docker",
+  "secrets": {
+    "salt": "OuhexE3SE04\u002BeFKI",
+    "hash": "63bD2B046ILWRjNYLUJraKFVpfi64JI7GU9VEvbRo2I=",
+    "secrets": {
+      "rabbitmq-password": {
+        "value": "OuhexE3SE04\u002BeFKIVDR4KsiEo\u002B7DyufECnnrtD\u002B9jmU7mZEB35SoOXstR9QZi8qYAfo="
+      },
+      "rabbitmq": {},
+      "echoapi": {
+        "ConnectionStrings__rabbitmq": "OuhexE3SE04\u002BeFKIFIxCL1tSoA0JTK37myk61wa6iixS\u002BtsE7oGXAy0DdMlyueynD9C6jMWiVitJ6bEovhyutpg87pufrXIfjf\u002BGYKA="
+      },
+      "mqconsume": {
+        "ConnectionStrings__rabbitmq": "OuhexE3SE04\u002BeFKIFIxCL1tSoA0JTK37myk61wa6iixS\u002BtsE7oGXAy0DdMlyueynD9C6jMWiVitJ6bEovhyutpg87pufrXIfjf\u002BGYKA="
+      }
+    }
+  }
+}
