@@ -14,7 +14,6 @@ configMapGenerator:
     - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
     - FUNCTIONS_WORKER_RUNTIME=dotnet-isolated
     - AzureFunctionsJobHost__telemetryMode=OpenTelemetry
-    - ASPNETCORE_URLS=http://+:8080
     - AzureWebJobsStorage__blobServiceUri={funcstorage01d5d.outputs.blobEndpoint}
     - AzureWebJobsStorage__queueServiceUri={funcstorage01d5d.outputs.queueEndpoint}
     - AzureWebJobsStorage__tableServiceUri={funcstorage01d5d.outputs.tableEndpoint}
